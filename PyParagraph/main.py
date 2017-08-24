@@ -19,7 +19,7 @@ with open(inputfile,'r', encoding="utf-8") as f:
 	for line in f:
 		# print(line)
 
-		arrSentence = re.split("(?<=[.!?]) +", line.strip())
+		arrSentence = re.split("(?<=[.!?][\s]) +", line.strip())
 		arrSentence = list(filter(None, arrSentence))
 		# print(len(arrSentence))
 		sCount = sCount + len(arrSentence)
