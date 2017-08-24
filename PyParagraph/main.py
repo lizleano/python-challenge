@@ -12,14 +12,14 @@ wCount = 0
 # strfile = input("Enter filename you want to analyze: example <budget_data_1.csv> ")
 
 # inputfile = os.path.join('Resources', strfile)
-inputfile = os.path.join('Resources', 'paragraph_2.txt')
+inputfile = os.path.join('Resources', 'paragraph_1.txt')
 
 with open(inputfile,'r', encoding="utf-8") as f:
-	# # count sentences
+	# # count sentences	
 	for line in f:
 		# print(line)
 
-		arrSentence = re.split("(?<=[.!?][\s]) +", line.strip())
+		arrSentence = re.split('(?<=[.!?]) +', line.strip())
 		arrSentence = list(filter(None, arrSentence))
 		# print(len(arrSentence))
 		sCount = sCount + len(arrSentence)
