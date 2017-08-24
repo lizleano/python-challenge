@@ -74,7 +74,7 @@ with open(csvpath, encoding="utf-8", newline='') as csvfile:
 			State.append(found)
 			# print(found)
 		else:
-			State.append("**Not Found**")
+			State.append("**Invalid State**")
 
 bossCSV = zip(EmpID,FirstName,LastName,DOB,SSN,State)
 
