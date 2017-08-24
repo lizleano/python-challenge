@@ -13,7 +13,7 @@ State = []
 strlast = ""
 
 # inputfile = os.path.join('Resources', strfile)
-csvpath = os.path.join('Resources', 'employee_data2.csv')
+csvpath = os.path.join('Resources', 'employee_data3.csv')
 
 with open(csvpath, encoding="utf-8", newline='') as csvfile:
 	# read file 
@@ -73,6 +73,8 @@ with open(csvpath, encoding="utf-8", newline='') as csvfile:
 		if len(found) > 0:
 			State.append(found)
 			# print(found)
+		else:
+			State.append("**Not Found**")
 
 bossCSV = zip(EmpID,FirstName,LastName,DOB,SSN,State)
 
